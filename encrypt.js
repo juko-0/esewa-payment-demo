@@ -8,15 +8,16 @@ function generateSignature(message, secretKey){
 }
 
 //testing
-const total_amount = 500;
-const transaction_uuid = "order-123";
+const total_amount = 110;
+const transaction_uuid = crypto.randomUUID();
 const product_code = "EPAYTEST";
 
-const message = `${total_amount},${transaction_uuid},${product_code}`;
+const message = `total_amount=${total_amount},transaction_uuid=${transaction_uuid},product_code=${product_code}`;
 
 const secretKey = process.env.ESEWA_SECRET_KEY;
 const signature = generateSignature(message, secretKey);
 
+console.log("Secret:", process.env.ESEWA_SECRET_KEY)
 console.log("Message:", message);
 console.log("Signature:", signature);
 

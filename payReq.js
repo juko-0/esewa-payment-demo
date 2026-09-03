@@ -16,10 +16,10 @@ router.get("/", (req, res) => {
             <input type="hidden" name="product_delivery_charge" value="0">
 
             <input type="hidden" name="success_url"
-                value="http://localhost:3000/payment/success">
+                value="http://localhost:3000/status/success">
 
             <input type="hidden" name="failure_url"
-                value="http://localhost:3000/payment/failure">
+                value="http://localhost:3000/status/failure">
 
             <input type="hidden" name="signed_field_names"
                 value="total_amount,transaction_uuid,product_code">
